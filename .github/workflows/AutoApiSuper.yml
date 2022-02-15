@@ -30,10 +30,10 @@ jobs:
         pip install requests
     - name: Read config from secrets  #读取机密
       env: 
-        ID_LIST: ${{ secrets.ID_LIST }} # secrets_id 提供
-        KEY_LIST: ${{ secrets.KEY_LIST }} # secrets_key 提供
-        ID_LIST2: ${{ secrets.ID_LIST2 }} # secrets_id 提供
-        KEY_LIST2: ${{ secrets.KEY_LIST2 }} # secrets_key 提供
+        ID_LIST: ${{ secrets.CONFIG_ID }} # secrets_id 提供
+        KEY_LIST: ${{ secrets.CONFIG_KEY }} # secrets_key 提供
+        ID_LIST2: ${{ secrets.CONFIG_ID }} # secrets_id 提供
+        KEY_LIST2: ${{ secrets.CONFIG_KEY }} # secrets_key 提供
       run: | 
         echo $ID_LIST > idlist.txt
         echo $KEY_LIST > keylist.txt
